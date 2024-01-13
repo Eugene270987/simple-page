@@ -1,0 +1,206 @@
+@import "../common/vars";
+
+.about{
+  background-color: $bgSectionColour;
+  padding: 50px 0;
+  color: $textColourSecondary;
+  &__inner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__content{
+    min-width: 370px;
+    &-title{
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    &-desc{
+      margin-bottom: 15px;
+    }
+  }
+
+
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 90px;
+    padding-bottom: 48px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      background-image: url("../img/about-candle.png");
+      width: 22px;
+      height: 30px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 2px;
+      bottom: 10px;
+      background-color: $infoColour;
+      width: 1000%;
+      height: 1px;
+    }
+    &-item{
+      &-desc{
+        font-size: 11px;
+      }
+      &-image{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+//MEDIA QUERIES
+
+
+//1000px
+@media screen and (max-width: 1000px) {
+  .about{
+    &__content{
+      min-width: 300px;
+    }
+    &__list{
+      padding-left: 0;
+    }
+  }
+}
+
+//768px
+
+@media screen and (max-width: 768px) {
+  .about{
+    &__inner{
+      gap: 17px;
+    }
+    &__content{
+      min-width: 200px;
+      margin: 0 30px;
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+    &__list{
+      padding-bottom: 33px;
+      gap: 10px;
+      &-item{
+        &:first-child{
+          img{
+            width: 120px;
+          }
+        }
+        &:nth-child(2){
+          img{
+            width: 191px;
+          }
+        }
+        &:last-child{
+          img{
+            width: 120px;
+          }
+        }
+        &-image{
+          margin-bottom: 6px;
+        }
+        &-desc{
+          font-size: 6px;
+        }
+      }
+    }
+  }
+}
+
+//480px
+
+@media screen and (max-width: 480px) {
+  .about{
+    padding-bottom: 25px;
+    &__content{
+      min-width: 172px;
+      margin: 0;
+    }
+    &__list{
+      align-items: flex-end;
+      padding-bottom: 30px;
+      gap: 5px;
+      &-item{
+        &:first-child{
+          img{
+            width: 80px;
+          }
+        }
+        &:nth-child(2){
+          img{
+            width: 140px;
+          }
+        }
+        &:last-child{
+          img{
+            width: 80px;
+          }
+        }
+        &-desc{
+          display: none;
+        }
+        &-image{
+          margin-bottom: 0;
+        }
+      }
+      &::before{
+        left: -10px;
+        bottom: -50px;
+      }
+      &::after{
+        left: 12px;
+        bottom: -40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    &__inner{
+      gap: 25px;
+    }
+    &__content{
+      min-width: 233px;
+      &-title{
+        margin-bottom: 10px;
+      }
+      &-desc{
+        margin-bottom: 10px;
+      }
+    }
+    &__list{
+      align-items: center;
+      padding-bottom: 11px;
+      &-item{
+        &:nth-child(2){
+          img{
+            display: none;
+          }
+        }
+        &:last-child{
+          img{
+            display: none;
+          }
+        }
+      }
+      &::before{
+        bottom: -25px;
+      }
+      &::after{
+        bottom: -15px;
+      }
+    }
+  }
+}

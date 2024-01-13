@@ -1,0 +1,76 @@
+@import "vars";
+body{
+  font-family: 'Comfortaa', 'Arial', cursive;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $textColour;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  background-color: $bgColour;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Yeseva One', 'Arial', sans-serif;
+}
+
+h2{
+  font-size: 40px;
+}
+
+/*Container width: 1160px*/
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+/*Media queries*/
+@media screen and (max-width: 1000px) {
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body{
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body{
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  h2{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 360px) {
+  body{
+    font-size: 8px;
+  }
+}

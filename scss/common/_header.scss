@@ -1,0 +1,35 @@
+@import "vars";
+
+.header{
+  background-color: $bgColour;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.phone__number{
+  position: relative;
+  &::before{
+    content: '';
+    background-image: url("/img/phone.svg");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -23px;
+    top: -3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .phone__number{
+    &::before {
+      width: 14px;
+      height: 14px;
+      left: -16px;
+      top: -1px;
+      background-size: cover;
+    }
+  }
+}

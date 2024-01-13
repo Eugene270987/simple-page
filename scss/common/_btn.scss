@@ -1,0 +1,48 @@
+@import "vars";
+
+.menu__btn{
+  display: none;
+}
+
+
+.btn__buy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  padding: 20px 45px;
+  background-color: $btnColour;
+  color: $btnTextColour;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .btn__buy{
+    width: 120px;
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .menu {
+    &__btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      & span{
+        height: 1px;
+        background-color: $infoColour;
+        width: 100%;
+      }
+    }
+    &__burger{
+      order: 1;
+    }
+  }
+  .btn__buy{
+    width: 91px;
+    padding: 11px 23px;
+  }
+}

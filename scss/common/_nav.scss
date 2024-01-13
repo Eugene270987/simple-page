@@ -1,0 +1,56 @@
+@import "vars";
+
+.menu{
+  &__list{
+    display: flex;
+    gap: 20px;
+    &-link{
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .menu{
+    &__burger{
+      &-list{
+        width: 153px;
+        background-color: $infoColour;
+        color: $menuColour;
+        flex-direction: column;
+        gap: 20px 0;
+        padding: 25px 35px 25px 45px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        transform: translateY(-110%);
+        transition: transform .5s ease;
+        &.menu--open{
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__menu{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &-list{
+      flex-direction: column;
+      gap: 22px;
+      align-items: center;
+    }
+  }
+  .menu{
+    &__list{
+      &-link{
+        font-size: 14px;
+      }
+    }
+  }
+}
